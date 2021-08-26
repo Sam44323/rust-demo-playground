@@ -10,4 +10,6 @@ fn main() {
 
     // tuple declaration with certain types
     let t: (i32, f64, char) = (41, 6.14, 'j');
+    // destructuring the tuple
+    let (_, _, x) = t; // _ means, I don't want that value (tuple can also be called by index such as t.0 or etc)
 }
