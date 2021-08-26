@@ -7,4 +7,7 @@ fn main() {
 
     // Example of type description addition (i8, u8, i16, u16, i32, u32, i64, u64, f32, f64, isize, usize)
     let x: u32 = 34;
+
+    // tuple declaration with certain types
+    let t: (i32, f64, char) = (41, 6.14, 'j');
 }
