@@ -23,5 +23,5 @@ fn main() {
 
     // printing a sole tuple
     println!("{:?}", s_tuple.1);
-    println!("{:?}", (s_tuple.1).1);
+    println!("{:?}", (s_tuple.1).1); // printing a nested tuple
 }
