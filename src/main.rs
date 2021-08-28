@@ -20,4 +20,7 @@ fn main() {
     let f_tuple = (1, 'a', false);
     let s_tuple = (4, f_tuple);
     println!("{}", s_tuple.0);
+
+    // printing a sole tuple
+    println!("{:?}", s_tuple.1);
 }
