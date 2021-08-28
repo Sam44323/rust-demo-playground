@@ -34,4 +34,11 @@ fn main() {
     // taking a slice of the array
     let ys = &arr_xs[1..4]; // & stands for referencing
     println!("{:?}", ys);
+
+    // string based on compound literal
+    let string = "String!";
+    println!("This is a compound string: {}", string);
+    // string with an actual string type
+    let actual_string = String::from("String!");
+    println!("This is an actual string type: {}", actual_string)
 }
