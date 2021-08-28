@@ -40,5 +40,9 @@ fn main() {
     println!("This is a compound string: {}", string);
     // string with an actual string type
     let actual_string = String::from("String!");
-    println!("This is an actual string type: {}", actual_string)
+    println!("This is an actual string type: {}", actual_string);
+
+    // converting a compound string literal to string type
+    let convert_string = &string.to_string();
+    println!("Converted the string: {}", convert_string);
 }
