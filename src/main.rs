@@ -29,5 +29,5 @@ fn main() {
 
     // example of an array ([i32;5] means 5 elements of size i32)
     let arr_xs: [i32; 5] = [1, 2, 3, 4, 5];
-    println!("{:?}", arr_xs);
+    println!("{:?} {}", arr_xs, arr_xs.len());
 }
