@@ -30,4 +30,8 @@ fn main() {
     // example of an array ([i32;5] means 5 elements of size i32)
     let arr_xs: [i32; 5] = [1, 2, 3, 4, 5];
     println!("{:?} {}", arr_xs, arr_xs.len());
+
+    // taking a slice of the array
+    let ys = &arr_xs[1..4]; // & stands for referencing
+    println!("{:?}", ys);
 }
