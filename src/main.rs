@@ -1,3 +1,11 @@
+fn take(v: Vec<i32>) {
+    println!("This is v: {}", v[10] + v[100]);
+}
+
+fn cop(a: i32, b: i32) {
+    println!("This is the value: {}", a + b);
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
@@ -52,4 +60,18 @@ fn main() {
     let string_sec = String::from("welcome to the party.");
     let concat_string = string_one + &string_sec;
     println!("Concatenated string: {}", concat_string);
+
+    // example of moving ownership from one function to the other
+    let mut v: Vec<i32> = Vec::new(); // creating a new vector mutable variable
+    for i in 1..1000 {
+        v.push(i);
+    }
+    take(v); // transferring ownership for the vector v from main() to take()
+
+    // example of copying the ownership
+    let a = 1;
+    let b = 4;
+
+    cop(a, b); // copying because after passing it to cop() function we are still using those values in main() function
+    println!("Still have the ownership for a and b: {} {}", a, b);
 }
