@@ -45,4 +45,5 @@ fn main() {
     // converting a compound string literal to string type
     let convert_string = &string.to_string();
     println!("Converted the string: {}", convert_string);
+    println!("Slice of a string: {}", &convert_string[0..4])
 }
