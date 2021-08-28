@@ -45,5 +45,11 @@ fn main() {
     // converting a compound string literal to string type
     let convert_string = &string.to_string();
     println!("Converted the string: {}", convert_string);
-    println!("Slice of a string: {}", &convert_string[0..4])
+    println!("Slice of a string: {}", &convert_string[0..4]);
+
+    // concatenation of a string
+    let string_one = String::from("This is Rust!");
+    let string_sec = String::from("welcome to the party.");
+    let concat_string = string_one + &string_sec;
+    println!("Concatenated string: {}", concat_string);
 }
