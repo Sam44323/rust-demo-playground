@@ -1,9 +1,20 @@
+// defining the type for Object struct
+struct Object {
+    width: u32,
+    height: u32,
+}
+
 fn take(v: Vec<i32>) {
     println!("This is v: {}", v[10] + v[100]);
 }
 
 fn cop(a: i32, b: i32) {
     println!("This is the value: {}", a + b);
+}
+
+fn area(obj: &Object) -> u32 {
+    // creating a new struct
+    obj.width * obj.height // alternative is using return obj.width * obj.height; for returning
 }
 
 fn main() {
@@ -74,4 +85,11 @@ fn main() {
 
     cop(a, b); // copying because after passing it to cop() function we are still using those values in main() function
     println!("Still have the ownership for a and b: {} {}", a, b);
+
+    // instantiating a new struct based on the type object
+    let o = Object {
+        width: 10,
+        height: 14,
+    };
+    println!("{}x{} with area: {}", o.width, o.height, area(&o)); // & for using reference
 }
