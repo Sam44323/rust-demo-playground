@@ -138,6 +138,15 @@ fn match_example() {
         (x, 0) => println!("x: {}", x), // if the right first value is 0
         _ => println!("this is nothing"),
     }
+
+    // example of guards matching
+    let another_value = (5, -5);
+    match another_value {
+        (x, y) if x == y => println!("equal"),
+        (x, y) if x + y == 0 => println!("equal zero"),
+        (x, _) if x % 2 == 0 => println!("x is even"), // _ means I don't care about the other value
+        _ => println!("diff"),
+    }
 }
 
 fn main() {
