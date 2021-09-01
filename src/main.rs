@@ -121,6 +121,15 @@ fn match_example() {
         5 => println!("five"),
         _ => println!("else"),
     }
+
+    let age = 15;
+    // example of multi case match conditions
+    match x {
+        1 => println!("One!"),
+        2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
+        13..=19 => println!("this is a teen"),
+        _ => println!("else"),
+    }
 }
 
 fn main() {
