@@ -49,9 +49,39 @@ fn conditionals() {
         println!("false");
     }
 
-    // using if-else add bindings to n(just like ternary operator)
+    // using if-else add bindings to n(just like ternary operator). return types need to be the same BTW
     n = if true { 48 } else { 30 };
     println!("{}", n);
+}
+
+// using the loop block for looping
+
+fn loop_example() {
+    let mut c = 0;
+    loop {
+        println!("Nice");
+        c += 1;
+        if c >= 10 {
+            break;
+        }
+    }
+}
+
+fn nested_loop_example_labels() {
+    let mut c = 0;
+    'a: loop {
+        println!("a");
+        'b: loop {
+            println!("b");
+            'c: loop {
+                println!("c");
+                c += 1;
+                if c >= 10 {
+                    break 'a; // example of breaking a higher loop
+                }
+            }
+        }
+    }
 }
 
 fn main() {
@@ -133,4 +163,6 @@ fn main() {
     new_object.show();
     println!("{:?}", new_object);
     conditionals();
+    loop_example();
+    nested_loop_example_labels();
 }
