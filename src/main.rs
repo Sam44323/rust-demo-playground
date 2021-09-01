@@ -14,6 +14,15 @@ impl Object {
     fn new(width: u32, height: u32) -> Object {
         Object { width, height }
     }
+
+    fn show(&self) {
+        println!(
+            "{} x {} with area: {}",
+            self.width,
+            self.height,
+            self.area()
+        );
+    }
 }
 
 fn take(v: Vec<i32>) {
@@ -98,12 +107,7 @@ fn main() {
         width: 10,
         height: 14,
     };
-    println!("{}x{} with area: {}", o.width, o.height, o.area()); // & for using reference
+    o.show();
     let new_object = Object::new(4, 5);
-    println!(
-        "{}x{} with area: {}",
-        new_object.width,
-        new_object.height,
-        new_object.area()
-    );
+    new_object.show();
 }
