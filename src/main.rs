@@ -42,12 +42,16 @@ fn cop(a: i32, b: i32) {
 
 // example of conditionals
 fn conditionals() {
-    let n = 4;
+    let mut n = 4;
     if n < 5 {
         println!("true");
     } else {
         println!("false");
     }
+
+    // using if-else add bindings to n(just like ternary operator)
+    n = if true { 48 } else { 30 };
+    println!("{}", n);
 }
 
 fn main() {
