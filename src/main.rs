@@ -1,4 +1,5 @@
 // defining the type for Object struct
+#[derive(Debug)]
 struct Object {
     width: u32,
     height: u32,
@@ -116,4 +117,5 @@ fn main() {
     o.show();
     let new_object = Object::new(4, 5);
     new_object.show();
+    println!("{:?}", new_object)
 }
