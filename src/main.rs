@@ -99,6 +99,15 @@ fn for_loop_example() {
     for i in a {
         println!("{}", i);
     }
+
+    // using dots (.. exclusive, means except the last one and ..= is inclusive)
+    for i in 1..10 {
+        println!("{}", i);
+    }
+
+    for i in 1..=10 {
+        println!("{}", i);
+    }
 }
 
 fn main() {
