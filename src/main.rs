@@ -128,6 +128,15 @@ fn match_example() {
         1 => println!("One!"),
         2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
         13..=19 => println!("this is a teen"),
+        _ => println!("ain't a special"),
+    }
+
+    // pair pattern matching
+    let value = (0, -4);
+    match x {
+        1 => println!("One!"),
+        2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
+        13..=19 => println!("this is a teen"),
         _ => println!("else"),
     }
 }
