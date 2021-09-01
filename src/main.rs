@@ -124,7 +124,7 @@ fn match_example() {
 
     let age = 15;
     // example of multi case match conditions
-    match x {
+    match age {
         1 => println!("One!"),
         2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
         13..=19 => println!("this is a teen"),
@@ -133,11 +133,10 @@ fn match_example() {
 
     // pair pattern matching
     let value = (0, -4);
-    match x {
-        1 => println!("One!"),
-        2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
-        13..=19 => println!("this is a teen"),
-        _ => println!("else"),
+    match value {
+        (0, y) => println!("y: {}", y), // if the left first value is 0
+        (x, 0) => println!("x: {}", x), // if the right first value is 0
+        _ => println!("this is nothing"),
     }
 }
 
