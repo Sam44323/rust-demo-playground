@@ -110,6 +110,19 @@ fn for_loop_example() {
     }
 }
 
+// match is like switch but with more power such as pattern matching
+fn match_example() {
+    let x = 5;
+    match x {
+        1 => println!("one"),
+        2 => println!("two"),
+        3 => println!("three"),
+        4 => println!("four"),
+        5 => println!("five"),
+        _ => println!("none"),
+    }
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
@@ -193,4 +206,5 @@ fn main() {
     nested_loop_example_labels();
     while_example();
     for_loop_example();
+    match_example();
 }
