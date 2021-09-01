@@ -5,12 +5,13 @@ struct Object {
 }
 
 // adding method to a struct using impl keyword(basically creating a namespace based on the struct Object [like class])
+// a struct can have multiple implementation
 impl Object {
     fn area(&self) -> u32 {
         // creating a new struct
         self.width * self.height // alternative is using return obj.width * obj.height; for returning
     }
-    // when a method is returning the same value as struct on which is implemented, then it acts like a constructor
+    // when a method doesn't have any self parameter, it is known as an associated functions i.e. an instance of that function is not created for the object based on the struct then it acts like a constructor
     fn new(width: u32, height: u32) -> Object {
         Object { width, height }
     }
