@@ -40,6 +40,16 @@ fn cop(a: i32, b: i32) {
     println!("This is the value: {}", a + b);
 }
 
+// example of conditionals
+fn conditionals() {
+    let n = 4;
+    if n < 5 {
+        println!("true");
+    } else {
+        println!("false");
+    }
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
@@ -117,5 +127,6 @@ fn main() {
     o.show();
     let new_object = Object::new(4, 5);
     new_object.show();
-    println!("{:?}", new_object)
+    println!("{:?}", new_object);
+    conditionals();
 }
