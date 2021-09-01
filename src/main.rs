@@ -4,7 +4,7 @@ struct Object {
     height: u32,
 }
 
-// adding functions to a struct using impl keyword
+// adding method to a struct using impl keyword
 impl Object {
     fn area(&self) -> u32 {
         // creating a new struct
