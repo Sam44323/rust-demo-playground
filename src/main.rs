@@ -49,7 +49,7 @@ fn conditionals() {
         println!("false");
     }
 
-    // using if-else add bindings to n(just like ternary operator). return types need to be the same BTW
+    // using if-else add bindings to n(just like a ternary operator). return types need to be the same BTW
     n = if true { 48 } else { 30 };
     println!("{}", n);
 }
