@@ -4,11 +4,18 @@ struct Object {
     height: u32,
 }
 
-// adding method to a struct using impl keyword
+// adding method to a struct using impl keyword(basically creating a namespace based on the struct Object [like class])
 impl Object {
     fn area(&self) -> u32 {
         // creating a new struct
         self.width * self.height // alternative is using return obj.width * obj.height; for returning
+    }
+    // when a method is returning the same value as struct on which is implemented, then it acts like a constructor
+    fn new(width: u32, height: u32) -> Object {
+        Object {
+            width: width,
+            height: height,
+        }
     }
 }
 
@@ -95,4 +102,11 @@ fn main() {
         height: 14,
     };
     println!("{}x{} with area: {}", o.width, o.height, o.area()); // & for using reference
+    let new_object = Object::new(4, 5);
+    println!(
+        "{}x{} with area: {}",
+        new_object.width,
+        new_object.height,
+        new_object.area()
+    ); // & for using reference
 }
