@@ -93,6 +93,14 @@ fn while_example() {
     }
 }
 
+fn for_loop_example() {
+    let a = vec![10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+    for i in a {
+        println!("{}", i);
+    }
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
@@ -175,4 +183,5 @@ fn main() {
     loop_example();
     nested_loop_example_labels();
     while_example();
+    for_loop_example();
 }
