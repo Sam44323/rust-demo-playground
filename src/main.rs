@@ -119,7 +119,7 @@ fn match_example() {
         3 => println!("three"),
         4 => println!("four"),
         5 => println!("five"),
-        _ => println!("none"),
+        _ => println!("else"),
     }
 }
 
