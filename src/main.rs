@@ -12,10 +12,7 @@ impl Object {
     }
     // when a method is returning the same value as struct on which is implemented, then it acts like a constructor
     fn new(width: u32, height: u32) -> Object {
-        Object {
-            width: width,
-            height: height,
-        }
+        Object { width, height }
     }
 }
 
