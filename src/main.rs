@@ -108,5 +108,5 @@ fn main() {
         new_object.width,
         new_object.height,
         new_object.area()
-    ); // & for using reference
+    );
 }
