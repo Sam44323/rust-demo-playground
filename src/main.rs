@@ -4,17 +4,20 @@ struct Object {
     height: u32,
 }
 
+// adding functions to a struct using impl keyword
+impl Object {
+    fn area(&self) -> u32 {
+        // creating a new struct
+        self.width * self.height // alternative is using return obj.width * obj.height; for returning
+    }
+}
+
 fn take(v: Vec<i32>) {
     println!("This is v: {}", v[10] + v[100]);
 }
 
 fn cop(a: i32, b: i32) {
     println!("This is the value: {}", a + b);
-}
-
-fn area(obj: &Object) -> u32 {
-    // creating a new struct
-    obj.width * obj.height // alternative is using return obj.width * obj.height; for returning
 }
 
 fn main() {
@@ -91,5 +94,5 @@ fn main() {
         width: 10,
         height: 14,
     };
-    println!("{}x{} with area: {}", o.width, o.height, area(&o)); // & for using reference
+    println!("{}x{} with area: {}", o.width, o.height, o.area()); // & for using reference
 }
