@@ -5,7 +5,7 @@ struct Object {
 }
 
 // adding method to a struct using impl keyword(basically creating a namespace based on the struct Object [like class])
-// a struct can have multiple implementation
+// a struct can have multiple implementation(but neither same methods and associated methods)
 impl Object {
     fn area(&self) -> u32 {
         // creating a new struct
