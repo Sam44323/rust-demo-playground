@@ -54,7 +54,7 @@ fn conditionals() {
     println!("{}", n);
 }
 
-// using the loop block for looping
+// using the loop block example for looping
 
 fn loop_example() {
     let mut c = 0;
