@@ -84,6 +84,15 @@ fn nested_loop_example_labels() {
     }
 }
 
+fn while_example() {
+    let mut n = 10;
+
+    while n != 0 {
+        println!("{}", n);
+        n -= 1;
+    }
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
@@ -165,4 +174,5 @@ fn main() {
     conditionals();
     loop_example();
     nested_loop_example_labels();
+    while_example();
 }
