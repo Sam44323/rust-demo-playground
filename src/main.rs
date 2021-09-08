@@ -328,7 +328,7 @@ fn main() {
     // example of using Options
     let result = division(5.0, 7.0);
     match result {
-        Some(x) => println!("{}", x),
+        Some(x) => println!("{:.4}", x), // .4 means limiting the amount of decimal numbers for 4
         None => println!("cannot divide by zero"),
     }
 }
