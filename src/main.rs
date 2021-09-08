@@ -180,6 +180,18 @@ impl Direction {
         }
     }
 }
+
+impl Keys {
+    fn destruct(&self) -> &String {
+        match *self {
+            Keys::UpKey(ref s) => s, // ref helps to destruct the enum data
+            Keys::DownKey(ref s) => s,
+            Keys::LeftKey(ref s) => s,
+            Keys::RightKey(ref s) => s,
+        }
+    }
+}
+
 #[derive(Debug)]
 struct Point {
     x: u32,
@@ -274,5 +286,6 @@ fn main() {
     // example of creating a value based on the enum type created
     let direction_enum = Direction::Up(Point { x: 0, y: 0 });
     let key_value = direction_enum.match_direction();
-    println!("{:?}", key_value)
+    let destruct = key_value.destruct();
+    println!("{}", destruct)
 }
