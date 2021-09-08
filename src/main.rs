@@ -149,6 +149,19 @@ fn match_example() {
     }
 }
 
+// declaring and enum named Direction with some values (explicitly mentioning how values can be)
+enum Direction {
+    Up(Point),
+    Down(Point),
+    Left(Point),
+    Right(Point),
+}
+
+struct Point {
+    x: u32,
+    y: u32,
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
@@ -233,4 +246,7 @@ fn main() {
     while_example();
     for_loop_example();
     match_example();
+
+    // example of creating a value based on the enum type created
+    let directionEnum = Direction::Up(Point { x: 0, y: 0 });
 }
