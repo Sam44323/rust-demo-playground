@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+#![allow(unused_labels)]
 // defining the type for Object struct
 #[derive(Debug)]
 struct Object {
