@@ -270,7 +270,7 @@ fn main() {
     match_example();
 
     // example of creating a value based on the enum type created
-    let directionEnum = Direction::Up(Point { x: 0, y: 0 });
-    let keyValue = directionEnum.match_direction();
-    println!("{:?}", keyValue)
+    let direction_enum = Direction::Up(Point { x: 0, y: 0 });
+    let key_value = direction_enum.match_direction();
+    println!("{:?}", key_value)
 }
