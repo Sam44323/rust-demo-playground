@@ -283,7 +283,7 @@ fn main() {
     for_loop_example();
     match_example();
 
-    // example of creating a value based on the enum type created
+    // example of creating a value based on the enum type created above
     let direction_enum = Direction::Up(Point { x: 0, y: 0 });
     let key_value = direction_enum.match_direction();
     println!("{}", key_value.destruct())
