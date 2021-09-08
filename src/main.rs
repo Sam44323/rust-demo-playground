@@ -157,6 +157,27 @@ enum Direction {
     Right(Point),
 }
 
+enum Keys {
+    UpKey(String),
+    DownKey(String),
+    LeftKey(String),
+    RightKey(String),
+}
+
+// example of applying implementation to an enum
+
+impl Direction {
+    fn match_direction(&self) -> Keys {
+        match *self {
+            // matching the direction with the keys pressed (we don't care about the inner data for direction so we add _)
+            Direction::Up(_) => Keys::UpKey(String::from("Pressed w")),
+            Direction::Down(_) => Keys::DownKey(String::from("Pressed s")),
+            Direction::Left(_) => Keys::LeftKey(String::from("Pressed a")),
+            Direction::Right(_) => Keys::RightKey(String::from("Pressed d")),
+        }
+    }
+}
+
 struct Point {
     x: u32,
     y: u32,
