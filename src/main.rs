@@ -304,7 +304,7 @@ fn main() {
     let key_value = direction_enum.match_direction();
     println!("{}", key_value.destruct());
 
-    // creating variables based on Shapes enum
+    // example of variables based on Shapes enum
     let rec = Shape::Rectangle {
         width: 10,
         height: 7,
