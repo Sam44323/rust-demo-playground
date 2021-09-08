@@ -184,7 +184,7 @@ impl Direction {
 impl Keys {
     fn destruct(&self) -> &String {
         match *self {
-            Keys::UpKey(ref s) => s, // ref helps to destruct the enum data
+            Keys::UpKey(ref s) => s, // ref helps to destruct the enum data (ref is same as &)
             Keys::DownKey(ref s) => s,
             Keys::LeftKey(ref s) => s,
             Keys::RightKey(ref s) => s,
