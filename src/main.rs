@@ -214,6 +214,15 @@ impl Shape {
     }
 }
 
+// example of using Options in rust (sort of alternative for null)
+fn division(x: f64, y: f64) -> Option<f64> {
+    if y == 0.0 {
+        return None;
+    } else {
+        return Some(x / y);
+    }
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
@@ -314,5 +323,12 @@ fn main() {
 
     println!("{}", rec.area());
     println!("{}", square.area());
-    println!("{}", circle.area())
+    println!("{}", circle.area());
+
+    // example of using Options
+    let result = division(5.0, 7.0);
+    match result {
+        Some(x) => println!("{}", x),
+        None => println!("cannot divide by zero"),
+    }
 }
