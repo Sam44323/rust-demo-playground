@@ -302,5 +302,17 @@ fn main() {
     // example of creating a value based on the enum type created above
     let direction_enum = Direction::Up(Point { x: 0, y: 0 });
     let key_value = direction_enum.match_direction();
-    println!("{}", key_value.destruct())
+    println!("{}", key_value.destruct());
+
+    // creating variables based on Shapes enum
+    let rec = Shape::Rectangle {
+        width: 10,
+        height: 7,
+    };
+    let square = Shape::Square(10);
+    let circle = Shape::Circle(10);
+
+    println!("{}", rec.area());
+    println!("{}", square.area());
+    println!("{}", circle.area())
 }
