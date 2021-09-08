@@ -198,6 +198,12 @@ struct Point {
     y: u32,
 }
 
+enum Shape {
+    Rectangle { width: u32, height: u32 },
+    Square(u32),
+    Circle(u32),
+}
+
 fn main() {
     /*
     using _ for ignoring the unused variables warning
