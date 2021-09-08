@@ -286,6 +286,5 @@ fn main() {
     // example of creating a value based on the enum type created
     let direction_enum = Direction::Up(Point { x: 0, y: 0 });
     let key_value = direction_enum.match_direction();
-    let destruct = key_value.destruct();
-    println!("{}", destruct)
+    println!("{}", key_value.destruct())
 }
