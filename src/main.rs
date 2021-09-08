@@ -150,13 +150,14 @@ fn match_example() {
 }
 
 // declaring and enum named Direction with some values (explicitly mentioning how values can be)
+#[derive(Debug)]
 enum Direction {
     Up(Point),
     Down(Point),
     Left(Point),
     Right(Point),
 }
-
+#[derive(Debug)]
 enum Keys {
     UpKey(String),
     DownKey(String),
@@ -177,7 +178,7 @@ impl Direction {
         }
     }
 }
-
+#[derive(Debug)]
 struct Point {
     x: u32,
     y: u32,
@@ -270,4 +271,6 @@ fn main() {
 
     // example of creating a value based on the enum type created
     let directionEnum = Direction::Up(Point { x: 0, y: 0 });
+    let keyValue = directionEnum.match_direction();
+    println!("{:?}", keyValue)
 }
